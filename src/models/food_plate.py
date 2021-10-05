@@ -7,3 +7,5 @@ class FoodPlate(Base):
     name = Column(String)
     price = Column(Integer)
     creation = Column(DateTime)
+    description = Column(String)
+    link = Column(String)

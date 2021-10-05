@@ -49,7 +49,9 @@ def create_fp_cn(food_plate: FoodPlateCreate, db:Session):
         fp_data = FoodPlate(
             name = food_plate.name,
             price = food_plate.price,
-            creation = datetime.now()
+            creation = datetime.now(),
+            description = food_plate.description,
+            link = food_plate.link
         )
         db.add(fp_data)
         db.commit()

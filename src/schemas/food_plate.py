@@ -6,7 +6,8 @@ from datetime import datetime
 class FoodPlateBase(BaseModel):
     name: str
     price: int
-    
+    description: str
+    link: str
 
 class SuppliesPlateBase(BaseModel):
     quantity:int

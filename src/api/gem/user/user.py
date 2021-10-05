@@ -21,12 +21,13 @@ def user_create(user:UserCreate, db:Session = Depends(get_db)):
 def login(user:Login,db: Session = Depends(get_db)):
     user = authenticate(db,user.email,user.password)
     if not user:
-        raise HTTPException(status_code=400, detail="Incorrect email or password")
+        raise HTTPException(status_code=400, detail="Email o Contraseña Incorrectas")
     return {
         "access_token": create_access_token(user.email),
         "token_type": "bearer",
         "rol_id": user.rol.id if user.rol else None,
-        "rol_name": user.rol.name if user.rol else None
+        "rol_name": user.rol.name if user.rol else None,
+        "user_id": user.id if user.id else None
     }
 
 @router.get("/get_all_user/",response_model=UserListPag,tags=["admin"])
