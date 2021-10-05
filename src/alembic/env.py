@@ -30,7 +30,7 @@ def get_url():
     port=1521
     sid='xe'
     user='C##SIGLOXXI'
-    password='sys'
+    password='sigloxxi'
     sid = cx_Oracle.makedsn(host, port, sid=sid)
 
     return 'oracle://{user}:{password}@{sid}'.format(

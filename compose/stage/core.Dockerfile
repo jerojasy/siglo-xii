@@ -8,7 +8,8 @@ ENV APP_HOME=/home/app/web
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 
-RUN apk update && apk add --no-cache mariadb-dev build-base gcc make python3-dev libffi-dev
+RUN apk update
+# && apk add --no-cache mariadb-dev build-base gcc make python3-dev libffi-dev
 
 RUN apk --no-cache add libaio libnsl libc6-compat curl && \
 cd /tmp && \

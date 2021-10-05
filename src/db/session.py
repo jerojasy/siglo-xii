@@ -12,11 +12,11 @@ from sqlalchemy.exc import SQLAlchemyError
 #      connect_args={'connect_timeout': 3}
 # )
 
-host='host.docker.internal'
+host='34.125.149.182'
 port=1521
 sid='xe'
 user='C##SIGLOXXI'
-password='sys'
+password='sigloxxi'
 sid = cx_Oracle.makedsn(host, port, sid=sid)
 
 cstr = 'oracle://{user}:{password}@{sid}'.format(
